@@ -778,7 +778,7 @@ func goEvent(cev *cevent) Event {
 
 func cEvent(ev Event) *cevent {
 	evv := reflect.ValueOf(ev)
-	return (*cevent)(cast(evv.UnsafeAddr()))
+	return (*cevent)(cast(evv.Pointer()))
 }
 
 // Time
